@@ -1,0 +1,99 @@
+.App{
+  overflow-x: hidden;
+  }
+  .loading-spinner {
+      width: 30px;
+      height: 30px;
+      margin-top: 1rem;
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #383636; /* Black */
+      border-radius: 50%;
+      animation: spinner 1.5s linear infinite;
+    }
+    .mobile-nav {
+      overflow-y: scroll;
+      background-color: white;
+    }
+    .showNav {
+      transition: transform 1s ease-in-out;
+      background-color: #fffafa;
+    }
+    .overlay{
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0,0,0,0.5);
+      position: fixed;
+      top: 0%;
+    }
+    .overLanding{
+      background-color: rgba(0,0,0,0.5);
+      height: 200px;
+    }
+  
+    .loading-spinner {
+      width: 30px;
+      height: 30px;
+      margin-top: 1rem;
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #383636; /* Black */
+      border-radius: 50%;
+      animation: spinner 1.5s linear infinite;
+    }
+    .Cartloading-spinner {
+      width: 20px;
+      height: 20px;
+      /* margin-top: 1rem; */
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #383636; /* Black */
+      border-radius: 50%;
+      animation: spinner 1.5s linear infinite;
+    }
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .navbar {
+      box-shadow: 0px 0px 7px;
+      /* background-color: rgb(10, 10, 10); */
+      /* background-color: #b76e79 */
+    }
+    .footer {
+      box-shadow: 0px 0px 7px;
+      /* background-color: rgb(10, 10, 10); */
+      /* background-color: #b76e79 */
+    }
+    .landingimage{
+      background-image: url("/src/Assets/landingImage.webp");
+      /* background-color: #3EB812; */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 60%;
+  
+    }
+    @keyframes zoom-in-fade{
+      0%{
+        transform: scale(1);
+        opacity: 1;
+      }
+      100%{
+        transform: scale(1.1);
+        opacity: 0;
+      }
+    }
+  
+    .animate-zoom-in-fade{
+  animation: zoom-in-fade 3s ease-in-out infinite;
+    }
+    .bodyFont{
+      font-family: 'Fira Sans', sans-serif;
+    }
+    .headingFont{
+      font-family: 'Righteous', cursive;
+    }
+    .error{
+      color: red;
+    }
