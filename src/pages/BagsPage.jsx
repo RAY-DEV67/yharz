@@ -29,7 +29,6 @@ export function ProductsPage() {
     setloading(true);
     setempty(false);
     db.collection("Products")
-    .where("category", "==", "Fusion Bags")
       .get()
       .then((collections) => {
         const cloths = collections.docs.map((cloths) => {
@@ -66,7 +65,7 @@ export function ProductsPage() {
           {empty ? "No Results Found!!" : ""}
         </p> */}
 
-        <div className="mb-[5rem]">
+<div className="flex lg:flex flex-wrap gap-3 justify-center mb-[1rem]">
         {clothsList.map((post, index) => {
             return (
               <div

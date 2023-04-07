@@ -27,6 +27,9 @@ export function Cart() {
 
   console.log(empty);
 
+  const [size, setsize] = useState(12);
+  const [prices, setprices] = useState("price1");
+
   useEffect(() => {
     setloading(true);
     db.collection("Cart")
@@ -37,8 +40,8 @@ export function Cart() {
           return { ...cloths.data(), id: cloths.id };
         });
         const prices = collections.docs.map((cloths) => {
-          console.log(cloths.data().price);
-          return cloths.data().price;
+          console.log(cloths.data().price1);
+          return cloths.data().price1
         });
         // price.push(cloths.data().price)
         setsaved(cloths);
@@ -51,7 +54,7 @@ export function Cart() {
         }
       });
   }, []);
-  
+
   const formatCur = function (value, locale, currency) {
     return new Intl.NumberFormat(locale, {
       style: "currency",
@@ -85,10 +88,7 @@ export function Cart() {
             </p>
             {saved?.map((post, index) => {
               return (
-                <div
-                  key={index}
-                  className="sm:w-[85vw] lg:w-[95%] max-w-4xl"
-                >
+                <div key={index} className="sm:w-[85vw] lg:w-[95%] max-w-4xl">
                   <EcommerceCard post={post} />
                 </div>
               );
@@ -101,9 +101,12 @@ export function Cart() {
                 <p>SUBTOTAL</p>
                 <p>{sum}</p>
               </div>
-              <div onClick={() => {
-                navigate(`/Checkout/${saved[0].userId}`)
-              }} className="flex flex-col items-center">
+              <div
+                onClick={() => {
+                  navigate(`/Checkout/${saved[0].userId}`);
+                }}
+                className="flex flex-col items-center"
+              >
                 <button className="text-white rounded-[20px] bg-[#deab24] font-bold mt-[2rem] py-[0.5rem] px-[1rem]">
                   Check Out
                 </button>

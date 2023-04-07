@@ -20,6 +20,7 @@ import {
     const navigate = useNavigate();
     const [Cart, setCart] = useState([]);
     const [loading, setloading] = useState(false);
+    const [size, setsize] = useState(`${post.size1}`);
   
     const removeCart = async () => {
       setloading(true)
@@ -63,7 +64,7 @@ import {
     return (
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center">
-        <div className="border-y border-[#deab24] lg:h-[190px] w-[90vw] lg:w-[100%] flex rounded-[10px]">
+        <div className="border-y border-[#86574E] lg:h-[190px] w-[90vw] lg:w-[100%] flex rounded-[10px]">
           <div className="w-[40%]">
             <img
               src={post.images}
@@ -77,7 +78,15 @@ import {
           <div className="ml-[1rem]">
             <div>
               <div className="flex justify-between w-[40vw]">
-                <h1 className="text-[#deab24] font-bold mt-[0.5rem] text-left">{formatCur(post.price , 'en-NG' , "NGN")}</h1>
+                <div className="text-left mx-[0.5rem]">
+        {size == post.size1 ? <h1 className="text-[#86574E] font-bold mt-[0.5rem] text-left">
+          {formatCur(post.price1, "en-NG", "NGN")}
+        </h1> : size == post.size2 ? <h1 className="text-[#86574E] font-bold mt-[0.5rem] text-left">
+          {formatCur(post.price2, "en-NG", "NGN")}
+        </h1> : size == post.size3 ? <h1 className="text-[#86574E] font-bold mt-[0.5rem] text-left">
+          {formatCur(post.price3, "en-NG", "NGN")}
+        </h1> : ""}
+      </div>
                 {loading ? (
               <div className="spinner-container px-[0.5rem] pt-[0.5rem] flex justify-center items-center">
                 <div className="Cartloading-spinner"></div>
@@ -92,7 +101,14 @@ import {
                 <h1 className="text-left mt-[1rem] text-xl">{post.title}</h1>
               </div>
             </div>
-  
+            <div className="mt-[1rem]">
+        <p className="text-xs">Sizes</p>
+        <div className="flex">
+          {post.size1 ? <p onClick={() => {setsize(post.size1)}} className={`px-[0.2rem] text-center text-xs rounded-sm mt-[0.3rem] mb-[0.5rem] border font-bold ${size == post.size1 ? "bg-[#ffc5b9] text-[#86574E]" : ""}`}>{post.size1}</p> : ""}
+          {post.size2 ? <p onClick={() => {setsize(post.size2)}} className={`px-[0.2rem] mx-[0.5rem] text-xs text-center rounded-sm mt-[0.3rem] mb-[0.5rem] border font-bold ${size == post.size2 ? "bg-[#ffc5b9] text-[#86574E]" : ""}`}>{post.size2}</p> : ""}
+          {post.size3 ? <p onClick={() => {setsize(post.size3)}} className={`px-[0.2rem] text-center text-xs rounded-sm mt-[0.3rem] mb-[0.5rem] border font-bold ${size == post.size3 ? "bg-[#ffc5b9] text-[#86574E]" : ""}`}>{post.size3}</p> : ""}
+        </div>
+      </div>
           </div>
         </div>
       </div>

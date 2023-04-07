@@ -51,14 +51,20 @@ export function TopCard(props) {
     setloadingCart(true);
     try {
       const newDoc = await addDoc(docRef, {
-        userId: user?.uid,
+          userId: user?.uid,
         postId: post.id,
         images: post.images,
         title: post.title,
-        price: post.price,
+        price1: post.price1,
+        price2: post.price2,
+        price3: post.price3,
+        size1: post.size1,
+        size2: post.size2,
+        size3: post.size3,
         description: post.description,
         category: post.category
       });
+  
       console.log("DocumentAdded");
       setcart(cart + 1);
       setloadingCart(false);
@@ -71,7 +77,7 @@ export function TopCard(props) {
         console.log(saves);
       }
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
