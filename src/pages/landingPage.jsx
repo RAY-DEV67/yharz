@@ -62,8 +62,8 @@ export function LandingPage() {
       <div className="relative text-left border-b border-[#ffc5b9] rounded-b-[20px] pt-[16%] lg:pt-[8%] lg:top-[25%]">
         <img src={images[index]} alt="Cadmus" className="h-[400px] w-[100%] object-cover animate-zoom-in-fade rounded-b-[20px]"/>
         <div className="flex flex-col items-center justify-center w-[100vw] lg:w-[60vw] h-[88.5%] absolute top-[16%] mt-[-1.3rem] rounded-b-[20px] overLanding">
-        <p className="mx-[1rem] text-3xl text-white headingFont">CADMUS DE VOGUE</p>
-          <p className="mx-[1rem] text-3xl text-white headingFont">ELEGANCE AND STYLE</p>
+        <p className="mx-[1rem] text-3xl text-white">CADMUS DE VOGUE</p>
+          <p className="mx-[1rem] text-3xl text-[#ffc5b9] font-bold headingFont">ELEGANCE AND STYLE</p>
         </div>
       </div>
       <Search />

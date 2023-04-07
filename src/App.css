@@ -91,9 +91,9 @@
     .bodyFont{
       font-family: 'Fira Sans', sans-serif;
     }
-    .headingFont{
+     .headingFont{ 
       font-family: 'Righteous', cursive;
-    }
+    } 
     .error{
       color: red;
     }
