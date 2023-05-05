@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
     return (
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center w-[100%] mt-[0.5rem] productfont">
-        <div className="border-y border-[#86574E] w-[80vw] lg:w-[100%] lg:h-[190px] flex rounded-[10px]">
+        <div className="border-y border-[#282828] w-[80vw] lg:w-[100%] lg:h-[190px] flex rounded-[10px]">
           <div className="w-[40%]">
             <img
               src={post.images}
@@ -30,7 +30,7 @@ import { useNavigate } from "react-router-dom";
           <div className="ml-[1rem]">
             <div>
               <div className="flex justify-between w-[40vw]">
-                <h1 className="text-[#86574E] font-bold mt-[0.5rem] text-left">{formatCur(post.price1 , 'en-NG' , "NGN")}</h1>
+                <h1 className="text-[#282828] font-bold mt-[0.5rem] text-left">{formatCur(post.price1 , 'en-NG' , "NGN")}</h1>
               </div>
   
               <div>

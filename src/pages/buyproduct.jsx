@@ -178,7 +178,7 @@ console.log(error)
               </div>
 
               <div className="mx-[1rem] flex justify-center">
-        <div className="py-[0.5rem] px-[1rem] rounded-sm mt-[1rem] w-[130px] mb-[0.5rem] bg-[#ffc5b9]" onClick={() => {
+        <div className="py-[0.5rem] px-[1rem] rounded-sm mt-[1rem] w-[130px] mb-[0.5rem] bg-[#c0e07d]" onClick={() => {
                 !user
                   ? navigate("/Profile")
                   : hasProductBeenSaved
@@ -190,7 +190,7 @@ console.log(error)
               <div className="Cartloading-spinner"></div>
             </div>
           ) : (
-           <p className="text-[#86574E] text-center text-sm w-[100%]">{hasProductBeenSaved ? "Added To Cart!!" : "Add To Cart "}</p>
+           <p className="text-[#282828] text-center text-sm w-[100%]">{hasProductBeenSaved ? "Added To Cart!!" : "Add To Cart "}</p>
           )}
         </div>
              </div>

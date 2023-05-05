@@ -64,7 +64,7 @@ import {
     return (
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center">
-        <div className="border-y border-[#86574E] lg:h-[190px] w-[90vw] lg:w-[100%] flex rounded-[10px]">
+        <div className="border-y border-[#c0e07d] lg:h-[190px] w-[90vw] lg:w-[100%] flex rounded-[10px]">
           <div className="w-[40%]">
             <img
               src={post.images}
@@ -86,7 +86,7 @@ import {
         </h1> : size == post.size3 ? <h1 className="text-[#86574E] font-bold mt-[0.5rem] text-left">
           {formatCur(post.price3, "en-NG", "NGN")}
         </h1> : ""} */}
-        <div className="text-[#86574E] font-bold mt-[0.5rem] text-left">
+        <div className="text-[#282828] font-bold mt-[0.5rem] text-left">
         {formatCur(post.price1, "en-NG", "NGN")}
         </div>
       </div>

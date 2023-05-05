@@ -50,7 +50,7 @@ export function ProductsPage() {
   return (
     <div>
       <div className="lg:absolute lg:top-[13%] pt-[90px] lg:left-[35%] lg:z-[-1] lg:w-[60%]">
-        <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#ffc5b9] py-[1rem]">Cadmus Collections</p>
+        <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#c0e07d] py-[1rem]">Yharz The Brand</p>
         <Search />
 
         {/* <p className="w-[100%] flex flex-col items-center my-[1rem] loaderContainer">
